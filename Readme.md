@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Марина](https://up.htmlacademy.ru/htmlcss/24/user/942251).
-* Наставник: `Неизвестно`.
+* Наставник: [Данил Чушко](https://up.htmlacademy.ru/htmlcss/24/user/564149).
 
 ---
 
