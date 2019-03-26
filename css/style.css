@@ -116,8 +116,6 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-
-
 header .container {
     position: relative;
     padding: 34px 56px 51px 59px;
@@ -146,10 +144,10 @@ header .container {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    margin-bottom: 31px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
 }
 
 .search-form {
@@ -157,6 +155,7 @@ header .container {
     display: -ms-flexbox;
     display: flex;
     position: relative;
+    height: 49px;
 }
 
 .search-form::before {
@@ -502,16 +501,27 @@ header .container {
     text-transform: none;
 }
 
+main .container {
+    position: relative;
+}
+
+.benefits-gradient {
+    position: absolute;
+    top: -35px;
+
+    width: 100%;
+    height: 300px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(49%, #f7e296), color-stop(49%, #ffffff) );
+    background-image: linear-gradient(#f7e296 49%, #ffffff 49% );
+}
+
 .main-benefits-slider {
     position: relative;
     padding-bottom: 93px;
-
-    background-color: #ffffff;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(19%, #f7e296), color-stop(19%, #ffffff) );
-    background-image: linear-gradient(#f7e296 19%, #ffffff 19% );
 }
 
 .slider-list-benefits {
+    position: relative;
     margin: 0;
     padding: 0;
 
@@ -525,6 +535,7 @@ header .container {
 }
 
 .slider-image {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -562,7 +573,7 @@ header .container {
     content: "01";
 
     position: absolute;
-    top: -12px;
+    top: -13px;
     right: 46px;
 
     font-family: 'gilroyextrabold', Arial, sans-serif;
@@ -578,7 +589,7 @@ header .container {
     content: "02";
 
     position: absolute;
-    top: -12px;
+    top: -13px;
     right: 46px;
 
     font-family: 'gilroyextrabold', Arial, sans-serif;
@@ -594,7 +605,7 @@ header .container {
     content: "03";
 
     position: absolute;
-    top: -12px;
+    top: -13px;
     right: 46px;
 
     font-family: 'gilroyextrabold', Arial, sans-serif;
@@ -630,7 +641,6 @@ header .container {
 .slider-text--1 {
     width: 482px;
 }
-
 .slider-text--2 {
     width: 442px;
 }
@@ -670,15 +680,16 @@ header .container {
 }
 
 .slider-button {
+    position: relative;
     padding-left: 44px;
     padding-right: 44px;
-    margin-bottom: 47px
+    margin-bottom: 47px;
 }
 
 .slider-controls-benefits {
     position: absolute;
-    left: 97%;
-    top: 328px;
+    left: 83.5%;
+    top: 47.5%;
     z-index: 50;
 
     width: 160px;
@@ -686,8 +697,8 @@ header .container {
 
     text-align: center;
     font-size: 0;
-    -webkit-transform: translateX(-97%);
-            transform: translateX(-97%);
+    -webkit-transform: translateY(46px);
+            transform: translateY(46px);
 }
 
 .slider-controls-benefits label {
@@ -875,8 +886,22 @@ header .container {
 }
 
 .main-services {
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(26%, #ffffff), color-stop(26%, #e5e5e5) );
-    background-image: linear-gradient(#ffffff 26%, #e5e5e5 26% );
+    position: relative;
+    min-width: 1160px;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(21%, transparent), color-stop(21%, #e5e5e5) );
+    background-image: linear-gradient(transparent 21%, #e5e5e5 21% );
+}
+
+.services-gradient {
+    position: absolute;
+    top: 25px;
+
+    min-width: 1160px;
+    width: 100%;
+    height: 360px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(21%, #ffffff), color-stop(21%, #e5e5e5) );
+    background-image: linear-gradient(#ffffff 21%, #e5e5e5 21% );
 }
 
 .main-services .container {
@@ -886,10 +911,6 @@ header .container {
     padding-top: 75px;
     padding-bottom: 140px;
     padding-right: 300px;
-
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(26%, #ffffff), color-stop(26%, #e5e5e5) );
-
-    background-image: linear-gradient(#ffffff 26%, #e5e5e5 26% );
 }
 
 .slider-controls-services {
@@ -1004,6 +1025,10 @@ header .container {
     background-position: 0 0 ;
 }
 
+.slider-controls-services label {
+    cursor: pointer;
+}
+
 .slider-service {
      display: none;
 }
@@ -1031,6 +1056,12 @@ header .container {
     background-image: none;
 }
 
+#service-1:focus ~ .slider-controls-services .slider-controls-service--1,
+#service-2:focus ~ .slider-controls-services .slider-controls-service--2,
+#service-3:focus ~ .slider-controls-services .slider-controls-service--3 {
+    outline: auto;
+}
+
 .brand-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1040,7 +1071,7 @@ header .container {
     margin: 0;
     padding: 0;
     padding-top: 94px;
-    padding-bottom: 93px;
+    padding-bottom: 90px;
     list-style: none;
 }
 
@@ -1201,7 +1232,7 @@ header .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0;
-    padding: 0 60px 47px 60px;
+    padding: 0 60px 45px 60px;
 
     list-style: none;
 
@@ -1598,6 +1629,7 @@ header .container {
     width: 27px;
     height: 27px;
     margin-right: 11px;
+    border-radius: 3px;
 }
 
 .checkbox-on {
@@ -1624,6 +1656,8 @@ header .container {
 
 .filter-input-checkbox:focus ~ label .checkbox {
     opacity: 1;
+    -webkit-box-shadow: -1px 1px 3px 2px rgba(0,0,0, 0.2);
+            box-shadow: -1px 1px 3px 2px rgba(0,0,0, 0.2);
 }
 
 .filter .filter-bluetooth {
@@ -1638,6 +1672,7 @@ header .container {
     width: 25px;
     height: 25px;
     margin-right: 13px;
+    border-radius: 50%;
 }
 
 .radio-on {
@@ -1664,6 +1699,8 @@ header .container {
 
 .filter-input-radio:focus ~ label .radio {
     opacity: 1;
+    -webkit-box-shadow: 0 1px 0 3px rgba(0,0,0, 0.2);
+            box-shadow: 0 1px 0 3px rgba(0,0,0, 0.2);
 }
 
 .filter .button {
@@ -1688,7 +1725,7 @@ header .container {
 
 .catalog {
     width: 833px;
-    padding: 69px 0 77px 73px;
+    padding: 69px 0 75px 73px;
 }
 
 .catalog h3 {
@@ -1933,12 +1970,12 @@ header .container {
 }
 
 footer {
+    min-width: 1160px;
     background-color: #464646;
 }
 
 footer .container {
-    padding-top: 63px;
-    background-color: #464646;
+    padding-top: 65px;
 }
 
 .footer-top-wrap {
@@ -2212,7 +2249,7 @@ footer .container p {
     width: 960px;
     height: 553px;
     margin: auto;
-    padding-top: 92px;
+    padding-top: 93px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 80px;
@@ -2226,7 +2263,6 @@ footer .container p {
     letter-spacing: normal;
 
     -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-
             box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
@@ -2242,7 +2278,13 @@ footer .container p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
+}
+
+.contact-form-wrap input {
+    width: 360px;
+    height: 50px;
+    padding: 16px 20px 16px 20px;
 }
 
 .modal-user-login,
@@ -2260,9 +2302,11 @@ footer .container p {
     margin-bottom: 36px;
 }
 
-.modal-contact-down {
-    padding: 37px 80px 37px 80px;
-    background-color: #f4f4f4;
+.modal-user-message textarea {
+    width: 760px;
+    height: 156px;
+    padding: 16px 20px 10px 20px;
+    resize: none;
 }
 
 .contact-form input,
@@ -2271,17 +2315,6 @@ footer .container p {
 
     background-color: #f2f2f2;
     border: none;
-}
-
-.contact-form input {
-    width: 360px;
-    padding: 16px 20px 16px 20px;
-}
-
-.contact-form textarea {
-    width: 760px;
-    padding: 16px 20px 10px 20px;
-    resize: none;
 }
 
 .contact-form input:hover,
@@ -2327,7 +2360,7 @@ footer .container p {
 
 .modal-close {
     position: absolute;
-
+    z-index: 3;
     width: 55px;
     height: 55px;
 
@@ -2342,8 +2375,6 @@ footer .container p {
     opacity: 0.5;
 
     cursor: pointer;
-
-    z-index: 3;
 }
 
 .modal-close:hover {
@@ -2374,7 +2405,6 @@ footer .container p {
     margin: auto;
 
     -webkit-box-shadow: 0px 0px 16px 0 rgba(0, 0, 0, 0.5);
-
             box-shadow: 0px 0px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -2391,13 +2421,12 @@ footer .container p {
     display: block;
 
     -webkit-animation: bounce 0.6s;
-
             animation: bounce 0.6s;
 }
 
 .modal-error {
-  -webkit-animation: shake 0.6s;
-          animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
 }
 
 @-webkit-keyframes bounce {
@@ -2495,17 +2524,17 @@ footer .container p {
 }
 
 .modal-map p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
 
-  margin: 0;
+    margin: 0;
 }
 
 .modal-map iframe {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 
-  border: none;
+    border: none;
 }
