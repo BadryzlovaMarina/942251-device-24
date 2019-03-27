@@ -181,7 +181,7 @@ header .container {
     line-height: 30px;
 
     background-color: transparent;
-    border: none;
+    border: 2px solid transparent;
 }
 
 .search-field:focus {
@@ -633,7 +633,6 @@ main .container {
 
 .slider-text {
     margin: 0;
-    margin-bottom: 42px;
 
     color: #464646;
 }
@@ -681,34 +680,38 @@ main .container {
 
 .slider-button {
     position: relative;
-    padding-left: 44px;
-    padding-right: 44px;
+    display: block;
+    width: 220px;
+    margin-top: 42px;
     margin-bottom: 47px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
 }
 
 .slider-controls-benefits {
     position: absolute;
-    left: 83.5%;
-    top: 47.5%;
+    right: 22px;
+    bottom: 253px;
     z-index: 50;
-
-    width: 160px;
-    height: 10px;
-
-    text-align: center;
-    font-size: 0;
-    -webkit-transform: translateY(46px);
-            transform: translateY(46px);
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 140px;
 }
 
 .slider-controls-benefits label {
     position: relative;
 
-    display: inline-block;
-    vertical-align: top;
+    display: block;
     width: 12px;
     height: 12px;
-    padding: 17px;
+    margin-right: 21px;
 
     border-radius: 50%;
     cursor: pointer;
@@ -729,6 +732,11 @@ main .container {
     border: 1px solid #000000;
 
     border-radius: 50%;
+}
+
+.slider-field:focus ~ .slider-controls-benefits label {
+    -webkit-box-shadow: -1px 1px 3px 2px rgba(0,0,0, 0.2);
+            box-shadow: -1px 1px 3px 2px rgba(0,0,0, 0.2);
 }
 
 .slider-benefit {
@@ -2314,7 +2322,7 @@ footer .container p {
     margin-top: 9px;
 
     background-color: #f2f2f2;
-    border: none;
+    border: 3px solid transparent;
 }
 
 .contact-form input:hover,

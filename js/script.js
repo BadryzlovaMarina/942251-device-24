@@ -1,4 +1,4 @@
-var link = document.querySelector(".contact-button");       
+var link = document.querySelector(".contact-button");
 var popup = document.querySelector(".modal-contact");
 var close = popup.querySelector(".modal-close");
 
@@ -16,7 +16,7 @@ try {
     mailStorage = localStorage.getItem("mail");
 } catch (err) {
     isStorageSupport = false;
-}   
+}
 
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -25,7 +25,7 @@ link.addEventListener("click", function (evt) {
     if (loginStorage && mailStorage) {
         login.value = loginStorage;
         mail.value = mailStorage;
-        message.focus();    
+        message.focus();
     } else if(loginStorage) {
         login.value = loginStorage;
         mail.focus();
@@ -37,7 +37,6 @@ link.addEventListener("click", function (evt) {
     }
 });
 
-
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
@@ -46,10 +45,10 @@ close.addEventListener("click", function (evt) {
 
 form.addEventListener("submit", function (evt) {
     if (!login.value || !mail.value || !message.value) {
-    evt.preventDefault();
-    popup.classList.remove("modal-error");  
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error");    
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
     } else {
         if (isStorageSupport) {
             localStorage.setItem("login", login.value);

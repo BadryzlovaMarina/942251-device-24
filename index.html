@@ -54,9 +54,9 @@
             <div class="benefits-gradient"></div>
             <section class="main-benefits-slider">
                 <h2 class="visually-hidden">Спецпредложения</h2>
-                <input class="visually-hidden" type="radio" id="benefit-1" name="toggle-benefit" checked>
-                <input class="visually-hidden" type="radio" id="benefit-2" name="toggle-benefit">
-                <input class="visually-hidden" type="radio" id="benefit-3" name="toggle-benefit">
+                <input class="visually-hidden slider-field" type="radio" id="benefit-1" name="toggle-benefit" checked>
+                <input class="visually-hidden slider-field" type="radio" id="benefit-2" name="toggle-benefit">
+                <input class="visually-hidden slider-field" type="radio" id="benefit-3" name="toggle-benefit">
                 <ul class="slider-list-benefits">
                     <li class="slider-benefit">
                         <div class="slider-benefit-wrapper">
@@ -126,9 +126,15 @@
                     </li>
                 </ul>
                 <div class="slider-controls-benefits">
-                    <label class="slider-controls-benefit--1" for="benefit-1">Первый слайд</label>
-                    <label class="slider-controls-benefit--2" for="benefit-2">Второй слайд</label>
-                    <label class="slider-controls-benefit--3" for="benefit-3">Третий слайд</label>
+                    <label class="slider-controls-benefit--1" for="benefit-1">
+                        <span class="visually-hidden">Первый слайд</span>
+                    </label>
+                    <label class="slider-controls-benefit--2" for="benefit-2">
+                        <span class="visually-hidden">Второй слайд</span>
+                    </label>
+                    <label class="slider-controls-benefit--3" for="benefit-3">
+                        <span class="visually-hidden">Третий слайд</span>
+                    </label>
                 </div>
             </section>
             <section class="product">
